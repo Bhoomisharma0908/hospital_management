@@ -1,0 +1,22 @@
+/*package com.example.hospitalManagement.service;
+
+public interface PatientService {
+}*/
+package com.example.hospitalManagement.service;
+
+import com.example.hospitalManagement.entity.Patient;
+
+import java.util.List;
+
+public interface PatientService {
+
+    Patient savePatient(Patient patient);
+
+    List<Patient> getAllPatients();
+
+    Patient getPatientById(Long id);
+
+    Patient updatePatient(Long id, Patient patient);
+
+    void deletePatient(Long id);
+}

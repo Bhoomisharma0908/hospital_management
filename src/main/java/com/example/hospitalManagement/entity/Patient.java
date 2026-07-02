@@ -134,7 +134,7 @@ public class Patient {
         this.address = address;
     }
 
-    public String getDisease() {
+    public String getDisease() {                   //added
         return disease;
     }
 

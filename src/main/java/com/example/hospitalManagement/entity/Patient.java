@@ -1,4 +1,4 @@
-/*package com.example.hospitalManagement.entity;
+package com.example.hospitalManagement.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,51 +6,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-
-@Entity
-public class Patient {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String name;
-
-    private LocalDateTime birthDate;
-
-    private String email;
-
-    private String gender;
-}
-@Entity
-public class Patient {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String name;
-
-    private Integer age;
-
-    private String gender;
-
-    private String email;
-
-    private String phone;
-
-    private String address;
-
-    private String disease;
-
-    private LocalDate admissionDate;
-
-}*/
-package com.example.hospitalManagement.entity;
-
-import jakarta.persistence.*;
-        import java.time.LocalDate;
 
 @Entity
 public class Patient {
@@ -134,7 +89,7 @@ public class Patient {
         this.address = address;
     }
 
-    public String getDisease() {                   //added
+    public String getDisease() {
         return disease;
     }
 
@@ -142,7 +97,7 @@ public class Patient {
         this.disease = disease;
     }
 
-    public LocalDate getAdmissionDate() {//added
+    public LocalDate getAdmissionDate() {
         return admissionDate;
     }
 

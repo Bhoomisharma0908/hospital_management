@@ -1,4 +1,3 @@
-
 package com.example.hospitalManagement.repository;
 
 import com.example.hospitalManagement.entity.Patient;

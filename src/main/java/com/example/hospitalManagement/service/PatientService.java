@@ -1,10 +1,6 @@
-/*package com.example.hospitalManagement.service;
-
-public interface PatientService {
-}*/
 package com.example.hospitalManagement.service;
 
-import com.example.hospitalManagement.entity.Patient; //added
+import com.example.hospitalManagement.entity.Patient;
 
 import java.util.List;
 

@@ -1,5 +1,5 @@
 package com.example.hospitalManagement.service.impl;
-
+import com.example.hospitalManagement.exception.PatientNotFoundException;
 import com.example.hospitalManagement.entity.Patient;
 import com.example.hospitalManagement.repository.patientRepository;
 import com.example.hospitalManagement.service.PatientService;
@@ -24,9 +24,14 @@ public class PatientServiceImpl implements PatientService {
         return patientRepository.findAll();
     }
 
+    //@Override
+    //public Patient getPatientById(Long id) {
+      //  return patientRepository.findById(id).orElse(null);
+    //}
     @Override
     public Patient getPatientById(Long id) {
-        return patientRepository.findById(id).orElse(null);
+        return patientRepository.findById(id)
+                .orElseThrow(() -> new PatientNotFoundException("Patient not found with id: " + id));
     }
 
     @Override

@@ -5,6 +5,8 @@ import com.example.hospitalManagement.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
+import com.example.hospitalManagement.dto.PatientRequestDTO;
+import com.example.hospitalManagement.dto.PatientResponseDTO;
 
 import java.util.List;
 
@@ -16,8 +18,8 @@ public class PatientController {
     private PatientService patientService;
 
     @PostMapping
-    public Patient savePatient(@Valid @RequestBody Patient patient) {
-        return patientService.savePatient(patient);
+    public PatientResponseDTO savePatient(@Valid @RequestBody PatientRequestDTO patientRequestDTO) {
+        return patientService.savePatient(patientRequestDTO);
     }
     @GetMapping
     public List<Patient> getAllPatients() {

@@ -2,323 +2,982 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Hospital Management System</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Font -->
 
-    <!-- Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <div class="container">
 
-    <!-- Sidebar -->
+    <!-- =========================
+            SIDEBAR
+    ========================== -->
+
     <aside class="sidebar">
 
         <div class="logo">
+
             <i class="fa-solid fa-hospital"></i>
-            <h2>HospitalMS</h2>
+
+            <h2>Hospital</h2>
+
         </div>
 
         <ul class="menu">
 
             <li class="active">
-                <a href="#">
-                    <i class="fa-solid fa-chart-line"></i>
-                    Dashboard
+
+                <a href="#dashboard">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
                 </a>
+
             </li>
 
             <li>
+
                 <a href="#patients">
+
                     <i class="fa-solid fa-user-injured"></i>
-                    Patients
+
+                    <span>Patients</span>
+
                 </a>
+
             </li>
 
             <li>
+
                 <a href="#doctors">
+
                     <i class="fa-solid fa-user-doctor"></i>
-                    Doctors
+
+                    <span>Doctors</span>
+
                 </a>
+
             </li>
 
             <li>
+
                 <a href="#appointments">
+
                     <i class="fa-solid fa-calendar-check"></i>
-                    Appointments
+
+                    <span>Appointments</span>
+
                 </a>
+
+            </li>
+
+            <li>
+
+                <a href="#reports">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <span>Reports</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="#settings">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
             </li>
 
         </ul>
 
     </aside>
 
-    <!-- Main Content -->
+    <!-- =========================
+            MAIN CONTENT
+    ========================== -->
+
     <main class="main-content">
 
-        <!-- Header -->
+        <!-- HEADER -->
+
         <header class="topbar">
 
             <div>
-                <h1>Hospital Management System</h1>
-                <p>Manage Patients, Doctors & Appointments</p>
+
+                <h1>
+
+                    🏥 Hospital Management Dashboard
+
+                </h1>
+
+                <p>
+
+                    Welcome to the Hospital Management System
+
+                </p>
+
+            </div>
+
+            <div class="admin-profile">
+
+                <img src="https://ui-avatars.com/api/?name=Admin&background=1976d2&color=fff"
+                     alt="Admin">
+
+                <div>
+
+                    <h3>Administrator</h3>
+
+                    <span>System Admin</span>
+
+                </div>
+
             </div>
 
         </header>
 
-        <!-- Dashboard Cards -->
-        <section class="cards">
+        <!-- =========================
+                DASHBOARD
+        ========================== -->
 
-            <div class="card">
+        <section id="dashboard">
 
-                <i class="fa-solid fa-user-injured"></i>
+            <h2 class="section-title">
 
-                <div>
-                    <h3 id="patientCount">0</h3>
-                    <p>Total Patients</p>
+                Dashboard Overview
+
+            </h2>
+
+            <div class="cards">
+
+                <div class="card patients-card">
+
+                    <div class="icon">
+
+                        <i class="fa-solid fa-user-injured"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3 id="patientCount">
+
+                            0
+
+                        </h3>
+
+                        <p>
+
+                            Total Patients
+
+                        </p>
+
+                    </div>
+
                 </div>
 
-            </div>
+                <div class="card doctors-card">
 
-            <div class="card">
+                    <div class="icon">
 
-                <i class="fa-solid fa-user-doctor"></i>
+                        <i class="fa-solid fa-user-doctor"></i>
 
-                <div>
-                    <h3 id="doctorCount">0</h3>
-                    <p>Total Doctors</p>
+                    </div>
+
+                    <div>
+
+                        <h3 id="doctorCount">
+
+                            0
+
+                        </h3>
+
+                        <p>
+
+                            Total Doctors
+
+                        </p>
+
+                    </div>
+
                 </div>
 
-            </div>
+                <div class="card appointments-card">
 
-            <div class="card">
+                    <div class="icon">
 
-                <i class="fa-solid fa-calendar-check"></i>
+                        <i class="fa-solid fa-calendar-check"></i>
 
-                <div>
-                    <h3 id="appointmentCount">0</h3>
-                    <p>Appointments</p>
+                    </div>
+
+                    <div>
+
+                        <h3 id="appointmentCount">
+
+                            0
+
+                        </h3>
+
+                        <p>
+
+                            Appointments
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="card revenue-card">
+
+                    <div class="icon">
+
+                        <i class="fa-solid fa-heart-pulse"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+
+                            24/7
+
+                        </h3>
+
+                        <p>
+
+                            Emergency Service
+
+                        </p>
+
+                    </div>
+
                 </div>
 
             </div>
 
         </section>
-
-        <!-- Patient Section -->
+        <!-- =========================
+        PATIENT MANAGEMENT
+========================== -->
 
         <section id="patients" class="section">
 
-            <h2>Patient Management</h2>
+            <div class="section-header">
 
-            <form id="patientForm" class="form-grid">
+                <h2>
 
-                <input type="text"
-                       id="patientName"
-                       placeholder="Patient Name"
-                       required>
+                    <i class="fa-solid fa-user-injured"></i>
 
-                <input type="number"
-                       id="patientAge"
-                       placeholder="Age"
-                       required>
+                    Patient Management
 
-                <select id="patientGender">
+                </h2>
 
-                    <option value="">Select Gender</option>
-                    <option>Male</option>
-                    <option>Female</option>
-                    <option>Other</option>
+                <button class="primary-btn">
 
-                </select>
+                    <i class="fa-solid fa-plus"></i>
 
-                <input type="email"
-                       id="patientEmail"
-                       placeholder="Email"
-                       required>
+                    New Patient
 
-                <input type="text"
-                       id="patientPhone"
-                       placeholder="Phone Number"
-                       required>
-
-                <input type="text"
-                       id="patientAddress"
-                       placeholder="Address"
-                       required>
-
-                <input type="text"
-                       id="patientDisease"
-                       placeholder="Disease"
-                       required>
-
-                <input type="date"
-                       id="admissionDate"
-                       required>
-
-                <button type="submit">
-                    Save Patient
                 </button>
 
-            </form>
+            </div>
 
-            <table id="patientTable">
+            <!-- Patient Form -->
 
-                <thead>
+            <div class="form-card">
 
-                <tr>
+                <h3>
 
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>Gender</th>
-                    <th>Disease</th>
-                    <th>Action</th>
+                    Add New Patient
 
-                </tr>
+                </h3>
 
-                </thead>
+                <form id="patientForm" class="form-grid">
 
-                <tbody>
+                    <input
+                            type="text"
+                            id="patientName"
+                            placeholder="Patient Name"
+                            required>
 
-                </tbody>
+                    <input
+                            type="number"
+                            id="patientAge"
+                            placeholder="Age"
+                            required>
 
-            </table>
+                    <select id="patientGender">
+
+                        <option value="">Select Gender</option>
+
+                        <option>Male</option>
+
+                        <option>Female</option>
+
+                        <option>Other</option>
+
+                    </select>
+
+                    <input
+                            type="email"
+                            id="patientEmail"
+                            placeholder="Email"
+                            required>
+
+                    <input
+                            type="text"
+                            id="patientPhone"
+                            placeholder="Phone Number"
+                            required>
+
+                    <input
+                            type="text"
+                            id="patientAddress"
+                            placeholder="Address"
+                            required>
+
+                    <input
+                            type="text"
+                            id="patientDisease"
+                            placeholder="Disease"
+                            required>
+
+                    <input
+                            type="date"
+                            id="admissionDate"
+                            required>
+
+                    <button
+                            type="submit"
+                            class="save-btn">
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+
+                        Save Patient
+
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Search -->
+
+            <div class="table-toolbar">
+
+                <input
+                        type="text"
+                        id="patientSearch"
+                        placeholder="🔍 Search Patient">
+
+            </div>
+
+            <!-- Patient Table -->
+
+            <div class="table-container">
+
+                <table id="patientTable">
+
+                    <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Name</th>
+
+                        <th>Age</th>
+
+                        <th>Gender</th>
+
+                        <th>Email</th>
+
+                        <th>Phone</th>
+
+                        <th>Disease</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody id="patientTableBody">
+
+                    <!-- JavaScript will insert rows here -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
 
         </section>
-
-        <!-- Doctor Section -->
+        <!-- =========================
+        DOCTOR MANAGEMENT
+========================== -->
 
         <section id="doctors" class="section">
 
-            <h2>Doctor Management</h2>
+            <div class="section-header">
 
-            <form id="doctorForm" class="form-grid">
+                <h2>
 
-                <input type="text"
-                       id="doctorName"
-                       placeholder="Doctor Name"
-                       required>
+                    <i class="fa-solid fa-user-doctor"></i>
 
-                <input type="text"
-                       id="doctorSpecialization"
-                       placeholder="Specialization"
-                       required>
+                    Doctor Management
 
-                <input type="email"
-                       id="doctorEmail"
-                       placeholder="Email"
-                       required>
+                </h2>
 
-                <input type="text"
-                       id="doctorPhone"
-                       placeholder="Phone Number"
-                       required>
+                <button class="primary-btn">
 
-                <input type="number"
-                       id="doctorExperience"
-                       placeholder="Experience"
-                       required>
+                    <i class="fa-solid fa-plus"></i>
 
-                <button type="submit">
-                    Save Doctor
+                    New Doctor
+
                 </button>
 
-            </form>
+            </div>
 
-            <table id="doctorTable">
+            <!-- Doctor Form -->
 
-                <thead>
+            <div class="form-card">
 
-                <tr>
+                <h3>
 
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Specialization</th>
-                    <th>Email</th>
-                    <th>Action</th>
+                    Add New Doctor
 
-                </tr>
+                </h3>
 
-                </thead>
+                <form id="doctorForm" class="form-grid">
 
-                <tbody>
+                    <input
+                            type="text"
+                            id="doctorName"
+                            placeholder="Doctor Name"
+                            required>
 
-                </tbody>
+                    <input
+                            type="text"
+                            id="doctorSpecialization"
+                            placeholder="Specialization"
+                            required>
 
-            </table>
+                    <input
+                            type="email"
+                            id="doctorEmail"
+                            placeholder="Email"
+                            required>
+
+                    <input
+                            type="text"
+                            id="doctorPhone"
+                            placeholder="Phone Number"
+                            required>
+
+                    <input
+                            type="number"
+                            id="doctorExperience"
+                            placeholder="Experience (Years)"
+                            required>
+
+                    <button
+                            type="submit"
+                            class="save-btn">
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+
+                        Save Doctor
+
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Search -->
+
+            <div class="table-toolbar">
+
+                <input
+                        type="text"
+                        id="doctorSearch"
+                        placeholder="🔍 Search Doctor">
+
+            </div>
+
+            <!-- Doctor Table -->
+
+            <div class="table-container">
+
+                <table id="doctorTable">
+
+                    <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Name</th>
+
+                        <th>Specialization</th>
+
+                        <th>Email</th>
+
+                        <th>Phone</th>
+
+                        <th>Experience</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody id="doctorTableBody">
+
+                    <!-- JavaScript will insert rows here -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
 
         </section>
-
-        <!-- Appointment Section -->
+        <!-- =========================
+        APPOINTMENT MANAGEMENT
+========================== -->
 
         <section id="appointments" class="section">
 
-            <h2>Appointment Management</h2>
+            <div class="section-header">
 
-            <form id="appointmentForm" class="form-grid">
+                <h2>
 
-                <input type="number"
-                       id="patientId"
-                       placeholder="Patient ID"
-                       required>
+                    <i class="fa-solid fa-calendar-check"></i>
 
-                <input type="number"
-                       id="doctorId"
-                       placeholder="Doctor ID"
-                       required>
+                    Appointment Management
 
-                <input type="date"
-                       id="appointmentDate"
-                       required>
+                </h2>
 
-                <select id="appointmentStatus">
+                <button class="primary-btn">
 
-                    <option>Scheduled</option>
-                    <option>Completed</option>
-                    <option>Cancelled</option>
+                    <i class="fa-solid fa-plus"></i>
 
-                </select>
+                    New Appointment
 
-                <button type="submit">
-                    Book Appointment
                 </button>
 
-            </form>
+            </div>
 
-            <table id="appointmentTable">
+            <!-- Appointment Form -->
 
-                <thead>
+            <div class="form-card">
 
-                <tr>
+                <h3>
 
-                    <th>ID</th>
-                    <th>Patient</th>
-                    <th>Doctor</th>
-                    <th>Date</th>
-                    <th>Status</th>
+                    Book Appointment
 
-                </tr>
+                </h3>
 
-                </thead>
+                <form id="appointmentForm" class="form-grid">
 
-                <tbody>
+                    <select id="appointmentPatient" required>
 
-                </tbody>
+                        <option value="">Select Patient</option>
 
-            </table>
+                    </select>
+
+                    <select id="appointmentDoctor" required>
+
+                        <option value="">Select Doctor</option>
+
+                    </select>
+
+                    <input
+                            type="date"
+                            id="appointmentDate"
+                            required>
+
+                    <select id="appointmentStatus">
+
+                        <option value="Scheduled">Scheduled</option>
+
+                        <option value="Completed">Completed</option>
+
+                        <option value="Cancelled">Cancelled</option>
+
+                    </select>
+
+                    <button
+                            type="submit"
+                            class="save-btn">
+
+                        <i class="fa-solid fa-calendar-plus"></i>
+
+                        Book Appointment
+
+                    </button>
+
+                </form>
+
+            </div>
+
+            <!-- Search -->
+
+            <div class="table-toolbar">
+
+                <input
+                        type="text"
+                        id="appointmentSearch"
+                        placeholder="🔍 Search Appointment">
+
+            </div>
+
+            <!-- Appointment Table -->
+
+            <div class="table-container">
+
+                <table id="appointmentTable">
+
+                    <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Patient</th>
+
+                        <th>Doctor</th>
+
+                        <th>Specialization</th>
+
+                        <th>Date</th>
+
+                        <th>Status</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody id="appointmentTableBody">
+
+                    <!-- JavaScript will load appointments here -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
 
         </section>
+
+        <!-- =========================
+                QUICK STATISTICS
+        ========================== -->
+
+        <section id="reports" class="section">
+
+            <div class="section-header">
+
+                <h2>
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    Hospital Statistics
+
+                </h2>
+
+            </div>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="icon">
+
+                        <i class="fa-solid fa-bed"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>150</h3>
+
+                        <p>Total Beds</p>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="icon">
+
+                        <i class="fa-solid fa-user-nurse"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>40</h3>
+
+                        <p>Nursing Staff</p>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="icon">
+
+                        <i class="fa-solid fa-truck-medical"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>8</h3>
+
+                        <p>Ambulances</p>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <div class="icon">
+
+                        <i class="fa-solid fa-heart-pulse"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>24/7</h3>
+
+                        <p>Emergency Service</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- =========================
+        SETTINGS
+========================== -->
+
+        <section id="settings" class="section">
+
+            <div class="section-header">
+
+                <h2>
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    System Settings
+
+                </h2>
+
+            </div>
+
+            <div class="settings-grid">
+
+                <div class="setting-card">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                    <h3>Admin</h3>
+
+                    <p>Administrator Panel</p>
+
+                </div>
+
+                <div class="setting-card">
+
+                    <i class="fa-solid fa-database"></i>
+
+                    <h3>Database</h3>
+
+                    <p>Connected to MySQL</p>
+
+                </div>
+
+                <div class="setting-card">
+
+                    <i class="fa-brands fa-java"></i>
+
+                    <h3>Backend</h3>
+
+                    <p>Spring Boot REST API</p>
+
+                </div>
+
+                <div class="setting-card">
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                    <h3>Security</h3>
+
+                    <p>Ready for Spring Security</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+                ABOUT PROJECT
+        ========================== -->
+
+        <section class="section">
+
+            <div class="section-header">
+
+                <h2>
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    About Project
+
+                </h2>
+
+            </div>
+
+            <div class="about-card">
+
+                <p>
+
+                    This Hospital Management System is developed using
+                    <strong>Java</strong>,
+                    <strong>Spring Boot</strong>,
+                    <strong>Spring Data JPA</strong>,
+                    <strong>Hibernate</strong>,
+                    <strong>MySQL</strong>,
+                    <strong>HTML</strong>,
+                    <strong>CSS</strong>
+                    and
+                    <strong>JavaScript</strong>.
+
+                </p>
+
+                <br>
+
+                <p>
+
+                    Features included:
+
+                </p>
+
+                <ul>
+
+                    <li>✔ Dashboard</li>
+
+                    <li>✔ Patient Management</li>
+
+                    <li>✔ Doctor Management</li>
+
+                    <li>✔ Appointment Management</li>
+
+                    <li>✔ REST APIs</li>
+
+                    <li>✔ Validation</li>
+
+                    <li>✔ Exception Handling</li>
+
+                    <li>✔ DTO Pattern</li>
+
+                    <li>✔ ModelMapper</li>
+
+                    <li>✔ Responsive UI</li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+                FOOTER
+        ========================== -->
+
+        <footer class="footer">
+
+            <p>
+
+                © 2026 Hospital Management System
+
+            </p>
+
+            <p>
+
+                Developed using Spring Boot & Java
+
+            </p>
+
+        </footer>
 
     </main>
 
 </div>
+
+<!-- =========================
+        LOADING SPINNER
+========================= -->
+
+<div id="loader" class="loader" style="display:none;">
+
+    <div class="spinner"></div>
+
+</div>
+
+<!-- =========================
+        TOAST MESSAGE
+========================= -->
+
+<div id="toast" class="toast"></div>
+
+<!-- =========================
+        JAVASCRIPT
+========================= -->
 
 <script src="js/script.js"></script>
 
